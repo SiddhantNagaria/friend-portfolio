@@ -1,0 +1,405 @@
+
+/* =====================================
+   CERTIFICATIONS & ACHIEVEMENTS
+===================================== */
+
+.recognition-section {
+    position: relative;
+
+    padding: 110px 7%;
+
+    background: #0d1423;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.recognition-container {
+    max-width: 1200px;
+    margin: auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Glow */
+
+.recognition-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 15%;
+    left: 40%;
+
+    width: 350px;
+    height: 350px;
+
+    background: rgba(99, 102, 241, 0.08);
+
+    filter: blur(130px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* =====================================
+   RECOGNITION GRID
+===================================== */
+
+.recognition-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+
+    margin-top: 60px;
+}
+
+/* =====================================
+   RECOGNITION CARD
+===================================== */
+
+.recognition-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 370px;
+
+    padding: 32px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.recognition-card:hover {
+    transform: translateY(-10px);
+
+    background: rgba(99, 102, 241, 0.06);
+
+    border-color: rgba(129, 140, 248, 0.4);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        0 0 30px rgba(99, 102, 241, 0.07);
+}
+
+/* Decorative Gradient */
+
+.recognition-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #818cf8,
+        #5eead4
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.5s ease;
+}
+
+.recognition-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Background Decoration */
+
+.recognition-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -70px;
+    top: -70px;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(129, 140, 248, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    transition: transform 0.5s ease;
+}
+
+.recognition-card:hover::after {
+    transform: scale(1.5);
+}
+
+/* =====================================
+   CARD HEADER
+===================================== */
+
+.recognition-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.recognition-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(129, 140, 248, 0.12);
+
+    border: 1px solid rgba(129, 140, 248, 0.2);
+
+    border-radius: 14px;
+
+    color: #5eead4;
+
+    font-size: 25px;
+
+    transition: all 0.4s ease;
+}
+
+.recognition-card:hover .recognition-icon {
+    transform: rotate(-10deg) scale(1.1);
+
+    background: rgba(94, 234, 212, 0.12);
+
+    border-color: rgba(94, 234, 212, 0.35);
+}
+
+.recognition-category {
+    color: #5eead4;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    padding: 8px 12px;
+
+    background: rgba(94, 234, 212, 0.06);
+
+    border: 1px solid rgba(94, 234, 212, 0.13);
+
+    border-radius: 50px;
+}
+
+/* =====================================
+   CARD CONTENT
+===================================== */
+
+.recognition-content {
+    flex: 1;
+}
+
+.recognition-year {
+    color: #818cf8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.recognition-content h3 {
+    color: #f8fafc;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    margin: 15px 0;
+
+    line-height: 1.4;
+
+    transition: color 0.3s ease;
+}
+
+.recognition-card:hover .recognition-content h3 {
+    color: #c7d2fe;
+}
+
+.recognition-content p {
+    color: #94a3b8;
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    max-width: 450px;
+}
+
+/* =====================================
+   TAGS
+===================================== */
+
+.recognition-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+.recognition-tags span {
+    padding: 7px 11px;
+
+    color: #cbd5e1;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.recognition-tags span:hover {
+    color: #5eead4;
+
+    border-color: rgba(94, 234, 212, 0.4);
+
+    background: rgba(94, 234, 212, 0.08);
+
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   CARD FOOTER
+===================================== */
+
+.recognition-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 30px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.recognition-arrow {
+    color: #5eead4;
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.recognition-card:hover .recognition-arrow {
+    transform: translate(5px, -5px);
+}
+
+/* =====================================
+   BOTTOM NOTE
+===================================== */
+
+.recognition-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-top: 60px;
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 12px;
+}
+
+.recognition-note span {
+    color: #5eead4;
+    font-size: 20px;
+}
+
+.recognition-note p {
+    color: #94a3b8;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .recognition-section {
+        padding: 85px 6%;
+    }
+
+    .recognition-grid {
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .recognition-card {
+        padding: 24px;
+        min-height: 360px;
+    }
+
+    .recognition-content h3 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .recognition-section {
+        padding: 75px 5%;
+    }
+
+    .recognition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-card {
+        min-height: auto;
+    }
+
+    .recognition-note {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+}

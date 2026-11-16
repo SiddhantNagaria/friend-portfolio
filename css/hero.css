@@ -1,0 +1,725 @@
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 7% 90px;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(99, 102, 241, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(45, 212, 191, 0.07),
+            transparent 30%
+        ),
+        #0A0F1C;
+
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+
+    gap: 60px;
+}
+
+/* =====================================
+   HERO CONTENT
+===================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 16px;
+    margin-bottom: 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 50px;
+
+    color: #cbd5e1;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #34d399;
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px #34d399;
+
+    animation: statusPulse 1.8s infinite;
+}
+
+.hero-intro {
+    color: #818cf8;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 7vw, 88px);
+    line-height: 1.08;
+
+    font-weight: 800;
+    letter-spacing: -4px;
+
+    color: #f8fafc;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(
+        120deg,
+        #818cf8,
+        #5eead4
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content h2 {
+    margin-top: 22px;
+
+    font-size: clamp(17px, 2vw, 23px);
+    font-weight: 500;
+
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.hero-divider {
+    color: #64748b;
+    padding: 0 5px;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #818cf8,
+        #5eead4
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    margin-top: 22px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   TECHNOLOGY TAGS
+===================================== */
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.hero-tags span {
+    padding: 9px 15px;
+
+    background: rgba(129, 140, 248, 0.07);
+
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    border-radius: 7px;
+
+    color: #c7d2fe;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.hero-tags span:hover {
+    background: rgba(129, 140, 248, 0.17);
+
+    border-color: #818cf8;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.12);
+}
+
+/* =====================================
+   HERO BUTTONS
+===================================== */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 16px;
+    margin-top: 35px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 23px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.35s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(
+        120deg,
+        #6366f1,
+        #0d9488
+    );
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+}
+
+.btn-primary span {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover span {
+    transform: translate(4px, -4px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    color: #e2e8f0;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-secondary:hover {
+    border-color: #5eead4;
+
+    color: #5eead4;
+
+    background: rgba(94, 234, 212, 0.06);
+
+    transform: translateY(-5px);
+}
+
+/* =====================================
+   SOCIAL LINKS
+===================================== */
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+    margin-top: 38px;
+}
+
+.hero-socials a {
+    color: #94a3b8;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #5eead4;
+}
+
+.social-separator {
+    color: #475569;
+}
+
+/* =====================================
+   HERO IMAGE
+===================================== */
+
+.hero-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 500px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+
+    width: 340px;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 180px 180px 35px 35px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(99, 102, 241, 0.3),
+        rgba(45, 212, 191, 0.12)
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.35),
+        0 0 80px rgba(99, 102, 241, 0.12);
+
+    animation: imageFloat 5s ease-in-out infinite;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image-glow {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background: #6366f1;
+    filter: blur(100px);
+
+    opacity: 0.35;
+}
+
+/* =====================================
+   FLOATING INFO CARDS
+===================================== */
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+    animation: floatingCard 4s ease-in-out infinite;
+}
+
+.floating-card strong {
+    display: block;
+
+    font-size: 12px;
+    color: #f1f5f9;
+}
+
+.floating-card small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.floating-icon {
+    color: #5eead4;
+    font-size: 24px;
+}
+
+.card-top {
+    top: 65px;
+    left: -65px;
+}
+
+.card-bottom {
+    bottom: 65px;
+    right: -65px;
+
+    animation-delay: 1.5s;
+}
+
+/* =====================================
+   DECORATIVE ORBITS
+===================================== */
+
+.hero-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(129, 140, 248, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 480px;
+    height: 480px;
+
+    animation: orbitRotate 25s linear infinite;
+}
+
+.orbit-two {
+    width: 580px;
+    height: 580px;
+
+    border-color: rgba(94, 234, 212, 0.07);
+
+    animation: orbitRotate 35s linear infinite reverse;
+}
+
+/* =====================================
+   SCROLL INDICATOR
+===================================== */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #64748b;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    text-decoration: none;
+}
+
+.scroll-arrow {
+    font-size: 18px;
+    color: #5eead4;
+
+    animation: scrollBounce 1.5s infinite;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 12px #34d399;
+    }
+
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 3px #34d399;
+    }
+}
+
+@keyframes imageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatingCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 30px;
+    }
+
+    .hero-image-wrapper {
+        width: 290px;
+        height: 370px;
+    }
+
+    .card-top {
+        left: -25px;
+    }
+
+    .card-bottom {
+        right: -25px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 150px 6% 100px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+        min-height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 12vw, 68px);
+        letter-spacing: -2px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-tags,
+    .hero-buttons,
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        width: 270px;
+        height: 340px;
+    }
+
+    .orbit-one {
+        width: 350px;
+        height: 350px;
+    }
+
+    .orbit-two {
+        width: 410px;
+        height: 410px;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-status {
+        font-size: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 47px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-tags {
+        gap: 8px;
+    }
+
+    .hero-tags span {
+        font-size: 10px;
+        padding: 8px 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .hero-image-wrapper {
+        width: 235px;
+        height: 300px;
+    }
+
+    .floating-card {
+        padding: 10px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+    .card-top {
+        left: -15px;
+    }
+
+    .card-bottom {
+        right: -15px;
+    }
+
+    .scroll-indicator {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+}
+
+/* Accessibility: Reduce Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero *,
+    .hero *::before,
+    .hero *::after {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}
